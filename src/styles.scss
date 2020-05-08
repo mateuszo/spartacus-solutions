@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+
+$skipComponentStyles: (cx-mini-cart);
+
+@import "~@spartacus/styles/index";
+
+%custom-cx-mini-cart {
+  background-color: var(--cx-color-primary);
+  padding: 10px;
+
+  span::before {
+    content: " | ";
+  }
+
+  a {
+    color: var(--cx-color-inverse);
+  }
+
+  a:hover {
+    color: var(--cx-color-secondary);
+  }
+}
+
+cx-mini-cart {
+  @extend %custom-cx-mini-cart;
+}
+
+:root {
+  --cx-color-primary: #1071ff;
+  --cx-color-secondary: #f2f4f6;
+  --cx-color-dark: #0c0c0c;
+}
+
+cx-banner img {
+  border-radius: 10px;
+}
+
+header {
+  background-color: white;
+  color: var(--cx-color-dark);
+  .SiteLogo {
+    flex: 0.5;
+  }
+}
+
+cx-site-context-selector select {
+  background-color: white;
+}

@@ -1,0 +1,7 @@
+<ng-template cxOutletRef="ProductSummaryComponent" cxOutletPos="after">
+  <p *ngIf="product$ | async as product">
+    Availability: {{ product.stock.stockLevel }} ({{
+      product.availableForPickup ? "" : "Not "
+    }}available for pickup)
+  </p>
+</ng-template>

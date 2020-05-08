@@ -1,0 +1,5 @@
+<ng-template cxOutletRef="LandingPage2Template" cxOutletPos="before">
+  <div class="container" *ngIf="product$ | async as product">
+    <cx-product-list-item [product]="product"></cx-product-list-item>
+  </div>
+</ng-template>

@@ -1,0 +1,22 @@
+<ng-template cxOutletRef="cx-storefront" cxOutletPos="before">
+  <marquee *ngIf="isCovid"
+    ><h2>
+      #stayathome #covid19 #washyourhands #notravel #online_training #stayhome
+      #remotework #order_online #ecommerce
+    </h2></marquee
+  >
+</ng-template>
+
+<ng-template cxOutletRef="SiteLogo">
+  <a [routerLink]="['/']"
+    ><img src="https://divante.com/static/img/logo-new.svg"
+  /></a>
+</ng-template>
+
+<app-product-availability></app-product-availability>
+
+<app-promo></app-promo>
+
+<app-upselling></app-upselling>
+
+<app-cart-quantity></app-cart-quantity>
