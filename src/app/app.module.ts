@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { translations, translationChunksConfig } from '@spartacus/assets';
-import { B2cStorefrontModule, OutletRefModule } from '@spartacus/storefront';
+import { B2cStorefrontModule, OutletRefModule, PageComponentModule } from '@spartacus/storefront';
 import { MyOutletsModule } from './my-outlets/my-outlets.module';
 import { OccConfig, ConfigModule, Config, CmsConfig, CmsComponentMapping } from '@spartacus/core';
 import { CustomRoutingModule } from './custom-routing/custom-routing.module';
@@ -11,6 +11,9 @@ import { LocalizedRoutesConfig } from './localized-routes-config';
 import { SeoModule } from './seo/seo.module';
 import { ConfigDebuggerModule } from './config-debugger/config-debugger.module';
 import { LogoutConfig } from './logout-config';
+import { PlpModule } from './plp/plp.module';
+import { CustomLayoutModule } from './custom-layout/custom-layout.module';
+import { BannerModule } from './banner/banner.module';
 
 
 @NgModule({
@@ -22,8 +25,8 @@ import { LogoutConfig } from './logout-config';
     ConfigModule.withConfig({
       backend: {
         occ: {
-          baseUrl: 'http://localhost:3003',
-          // baseUrl: 'https://api.c39j2-walkersde1-d3-public.model-t.cc.commerce.ondemand.com',
+          // baseUrl: 'http://localhost:3003',
+          baseUrl: 'https://api.c39j2-walkersde1-d3-public.model-t.cc.commerce.ondemand.com',
           prefix: '/rest/v2/'
         }
       }
@@ -52,7 +55,13 @@ import { LogoutConfig } from './logout-config';
       logoutConfig: {
         logoutTimeout: 10000 // auto logout after 10 s of inactivity
       }
-    } as LogoutConfig)
+    } as LogoutConfig),
+    PlpModule,
+    CustomLayoutModule,
+    BannerModule,
+    PageComponentModule,
+    SeoModule
+
   ],
   providers: [
     { provide: LogoutConfig, useExisting: Config }
