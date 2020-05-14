@@ -5,19 +5,8 @@ $skipComponentStyles: (cx-mini-cart);
 @import "~@spartacus/styles/index";
 
 %custom-cx-mini-cart {
-  background-color: var(--cx-color-primary);
-  padding: 10px;
-
-  span::before {
-    content: " | ";
-  }
-
-  a {
-    color: var(--cx-color-inverse);
-  }
-
-  a:hover {
-    color: var(--cx-color-secondary);
+  .total {
+    display: none;
   }
 }
 
@@ -39,10 +28,35 @@ header {
   background-color: white;
   color: var(--cx-color-dark);
   .SiteLogo {
-    flex: 0.5;
+    width: unset;
+    img {
+      height: 50px;
+    }
+  }
+  .NavigationBar {
+    flex: unset;
+  }
+  .SearchBox {
+    margin: unset;
+  }
+  cx-searchbox label {
+    width: unset;
+    min-width: unset;
+  }
+  .SiteLogin {
+    .cx-login-greet {
+      display: none;
+    }
+    .HeaderLinks h5 {
+      padding-right: 0px;
+    }
   }
 }
 
 cx-site-context-selector select {
   background-color: white;
+}
+
+.CartPageTemplate {
+  display: block;
 }

@@ -14,6 +14,8 @@ import { LogoutConfig } from './logout-config';
 import { PlpModule } from './plp/plp.module';
 import { CustomLayoutModule } from './custom-layout/custom-layout.module';
 import { BannerModule } from './banner/banner.module';
+import { CustomCartModule } from './custom-cart/custom-cart.module';
+import { PdpModule } from './pdp/pdp.module';
 
 
 @NgModule({
@@ -41,7 +43,8 @@ import { BannerModule } from './banner/banner.module';
         fallbackLang: 'en'
       },
       features: {
-        level: '2.0'
+        // level: '2.0',
+        saveForLater: false
       },
     }),
     MyOutletsModule,
@@ -58,9 +61,12 @@ import { BannerModule } from './banner/banner.module';
     } as LogoutConfig),
     PlpModule,
     CustomLayoutModule,
-    BannerModule,
+    // BannerModule,
     PageComponentModule,
-    SeoModule
+    CustomCartModule,
+    PdpModule,
+    SeoModule,
+
 
   ],
   providers: [

@@ -11,7 +11,7 @@ import { ConfigDebuggerComponent } from './config-debugger.component';
   imports: [
     CommonModule,
     ConfigModule.withConfig({
-      debugConfig: DebugConfigType.SCREEN
+      debugConfig: DebugConfigType.CONSOLE
     } as DebugConfig)
   ],
   providers: [

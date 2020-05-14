@@ -12,10 +12,15 @@ export class SeoService extends SeoMetaService {
     this.description = meta.description;
     this.image = meta.image;
     this.robots = meta.robots || [PageRobotsMeta.INDEX, PageRobotsMeta.FOLLOW];
-    this.customTag = 'hardcoded';
+    this.twitterImage = meta.image;
+    this.twitterTitle = meta.title;
   }
 
-  protected set customTag(value: string) {
-    this.addTag({ name: 'customTag', content: value });
+  protected set twitterImage(value: string) {
+    this.addTag({ name: 'twitter:image', content: value });
+  }
+
+  protected set twitterTitle(value: string) {
+    this.addTag({ name: 'twitter:title', content: value });
   }
 }
