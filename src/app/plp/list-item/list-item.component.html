@@ -43,11 +43,12 @@
         </p>
       </div>
       <div class="col-12 col-md-4">
-        <cx-add-to-cart
-          *ngIf="product?.name.startsWith('D')"
+        <cx-add-to-cart></cx-add-to-cart>
+        <!-- <cx-add-to-cart
+          *ngIf="product.stock?.stockLevelStatus !== 'outOfStock'"
           [showQuantity]="false"
           [product]="product"
-        ></cx-add-to-cart>
+        ></cx-add-to-cart> -->
       </div>
     </div>
   </div>

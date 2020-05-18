@@ -5,11 +5,12 @@ import { CmsConfig, ConfigModule, I18nModule, UrlModule } from '@spartacus/core'
 import { ListNavigationModule, ViewConfigModule, ProductListModule, StarRatingModule, IconModule, MediaModule, AddToCartModule, ProductVariantsModule } from '@spartacus/storefront';
 import { ListItemComponent } from './list-item/list-item.component';
 import { RouterModule } from '@angular/router';
+import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 
 
 
 @NgModule({
-  declarations: [ListComponent, ListItemComponent],
+  declarations: [ListComponent, ListItemComponent, AddToCartComponent],
   imports: [
     CommonModule,
     ListNavigationModule,
@@ -21,7 +22,7 @@ import { RouterModule } from '@angular/router';
     ProductListModule,
     MediaModule,
     ProductVariantsModule,
-    AddToCartModule,
+    // AddToCartModule,
     ConfigModule.withConfig({
       cmsComponents: {
         CMSProductListComponent: {
